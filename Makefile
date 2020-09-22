@@ -19,3 +19,8 @@ git-Miguel:
 	git config --global user.name "miguelgabriel01"
     git config --global user.email "mgbs@discente.ifpe.edu.br"
     
+git-Bruno:
+	git config --global user.name "brunomanoel2019"
+    git config --global user.email "brunomanoel2019_2019@outlook.com"
+
+
