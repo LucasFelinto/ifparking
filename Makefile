@@ -2,7 +2,6 @@ start:
 	cp .env.example .env
 	composer install
 	php artisan key:generate
-	npm install
 	nano .env
 	php artisan migrate:fresh --seed
 	php artisan serve
@@ -15,7 +14,7 @@ git-thierry:
 	git config --global user.name "ThierryMatheus"
 	git config --global user.email "thierrymatheusreal@gmail.com"
 
-git-Bruno:
+git-patrick:
 	git config --global user.name "Patrick-Santana"
     git config --global user.email "zonaabissal2016@gmail.com"
 
