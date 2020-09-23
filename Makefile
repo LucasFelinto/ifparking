@@ -42,4 +42,7 @@ git-Josivaldo:
     git config --global user.name "josivaldonatal"
     git config --global user.email "josivaldonatal@gmail.com"
 
+git-Larissa:
+    git config --global user.name "FerreiraLarissa"
+    git config --global user.email "laryssaferreira12386@gmail.com"
 
