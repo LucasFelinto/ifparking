@@ -38,4 +38,8 @@ git-Maria C.:
     git config --global user.name "MARIA617"
     git config --global user.email "mariac4682@gmail.com"
 
+git-Josivaldo:
+    git config --global user.name "josivaldonatal"
+    git config --global user.email "josivaldonatal@gmail.com"
+
 
