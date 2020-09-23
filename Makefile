@@ -45,4 +45,8 @@ git-Josivaldo:
 git-Larissa:
     git config --global user.name "FerreiraLarissa"
     git config --global user.email "laryssaferreira12386@gmail.com"
+    
+git-Khevin:
+    git config --global user.name "Khevin Karlos"
+    git config --global user.name "karimoxiha@gmail.com"
 
