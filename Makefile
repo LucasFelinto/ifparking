@@ -33,5 +33,9 @@ git-Giovanna:
 git-Vinicius:
 	git config --global user.name "augusto.farias"
 	git config --global user.email "vinicinho1237@gmail.com"
+    
+git-Maria C.:
+    git config --global user.name "MARIA617"
+    git config --global user.email "mariac4682@gmail.com"
 
 
