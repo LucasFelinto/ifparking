@@ -57,3 +57,7 @@ git-Gabriella:
 git-Kaue:
     git config --global user.name "KaueLui"
     git config --global user.email "ofckaue@gmail.com"
+    
+git-Erinston:
+    git config --global user.name "erinston"
+    git config --global user.email "erinstong@gmail.com"
