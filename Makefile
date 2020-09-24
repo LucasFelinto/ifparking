@@ -50,3 +50,6 @@ git-Khevin:
     git config --global user.name "Khevin Karlos"
     git config --global user.name "karimoxiha@gmail.com"
 
+git-Gabriella:
+    git config --global user.name "gabriellabatista"
+    git config --global user.email "gabriella10batista@gmail.com"
