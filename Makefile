@@ -61,3 +61,7 @@ git-Kaue:
 git-Erinston:
     git config --global user.name "erinston"
     git config --global user.email "erinstong@gmail.com"
+
+git-Luis:
+	git config --global user.name "Luis Henrique"
+	git config --global user.email "luis_henrique_co@hotmail.com"
