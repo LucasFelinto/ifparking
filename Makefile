@@ -53,3 +53,7 @@ git-Khevin:
 git-Gabriella:
     git config --global user.name "gabriellabatista"
     git config --global user.email "gabriella10batista@gmail.com"
+
+git-Kaue:
+    git config --global user.name "KaueLui"
+    git config --global user.email "ofckaue@gmail.com"
