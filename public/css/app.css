@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;
+
+400;500&display=swap);h1 {
+  color: red;
+}
+
+h1 {
+  color: white;
+}
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #ededed;
+}
+
+.heading-light {
+  font-size: 25px;
+  font-weight: lighter;
+  color: white;
+}
+
+.heading-secondary {
+  font-size: 20px;
+}
+
+.container-login {
+  background-image: url("https://i.imgur.com/qEmT1t0.png");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container-login > .wrapper {
+  width: 270px;
+}
+
+.container-login > .wrapper > .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 144px;
+  margin-top: 80px;
+}
+
+.container-login > .wrapper > .logo > svg {
+  width: 80px;
+  height: 80px;
+}
+
+.container-login > .wrapper > .logo h1 {
+  margin-top: 23px;
+}
+
+.container-login h1 {
+  text-align: center;
+}
+
+.container-login form > a {
+  display: block;
+  text-align: center;
+}
+
+.container-login form > a:hover > svg {
+  fill: #d13639;
+}
+
+.container-login form > a:hover > svg > path {
+  fill: #ffffff;
+}
+
+.container-login form > div {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container-login footer {
+  margin-top: 124px;
+}
+
+.container-login footer > a {
+  display: block;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group > label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  color: #999999;
+  top: 50%;
+  left: 8px;
+  z-index: 99;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.input-group > input {
+  width: 100%;
+  height: 48px;
+  padding: 15px 10px 0px 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+  background-color: #ededed;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-group > input:focus,
+.input-group > input:valid {
+  border-bottom: 2px solid white;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  font-size: 11px;
+  top: 11px;
+}
+
