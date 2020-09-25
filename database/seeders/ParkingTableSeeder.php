@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Parking;
+use Illuminate\Support\Facades\DB;
 
 class ParkingTableSeeder extends Seeder
 {
