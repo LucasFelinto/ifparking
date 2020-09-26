@@ -8,7 +8,7 @@ start:
 
 git-lucas:
 	git config --global user.name "LucasFelinto"
-	git config --global user.email "elucasfelinto@gmail.com"https://github.com/LucasFelinto/ifparking.git
+	git config --global user.email "elucasfelinto@gmail.com"
 
 git-thierry:
 	git config --global user.name "ThierryMatheus"
