@@ -16,27 +16,30 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
            0 => [
-        'name' => 'Miguel gabriel', 
-        'email' => 'gabrielogabriel10@gmail.com',
-        'password' => '#DeusETop',
-        'class' => 'IPI',
-        'telephone' => '081992765185',
-        'office'  => '',
-        'siape' => '',
-        'registration' => '2018infig0563',
-
-    ],
+                'cpf' => '00000000000',
+                'name' => 'Miguel gabriel', 
+                'email' => 'gabrielogabriel10@gmail.com',
+                'password' => bcrypt('#DeusETop'),
+                'telephone' => '081992765185',
+                'registration' => '2018infig0563',
+            ],
             1 => [
+                'cpf' => '11111111111',
                 'name' => 'Miguel gabriel', 
                 'email' => 'gabriel10@gmail.com',
-                'password' => 'EUSouDeJesus',
-                'class' => '',
+                'password' => bcrypt('EUSouDeJesus'),
                 'telephone' => '081992765185',
-                'office'  => 'Diretor geral do campus',
-                'siape' => '123jesus',
-                'registration' => '',
-        
-            ]
+                'registration' => '2020JesusVem',
+            ],
+            2 => [
+                'cpf' => '22222222222',
+               'name' => 'Gabriel miguel', 
+               'email' => 'supremopoder@gmail.com',
+               'password' => bcrypt('#salmos23'),
+               'telephone' => '081992765185',
+               'registration' => '2020infig0563',
+            ],
+       
 
             ];
 
