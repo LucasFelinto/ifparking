@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Vehicles;
 use Illuminate\Support\Facades\DB;
 
 class VehicleTableSeeder extends Seeder
@@ -17,18 +16,18 @@ class VehicleTableSeeder extends Seeder
     {
         DB::table('vehicles')->insert([
             0 => [
-                'user' => '1',
+                'user_id' => '1',
+                'type_id' => '1',
                 'board' => 'IHC-2020',
                 'model' => 'Ferrari California',
-                'color' => 'Vermelha',
-                'type' => 'Carro'
+                'color' => 'Vermelha'
             ],
             1 => [
-                'user' => '2',
+                'user_id' => '2',
+                'type_id' => '1',
                 'board' => 'PHP-2020',
                 'model' => 'Nissan Kicks',
-                'color' => 'Vermelha',
-                'type' => 'Carro'
+                'color' => 'Vermelha'
             ],
         ]);
     }
