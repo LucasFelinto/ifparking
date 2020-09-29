@@ -9,6 +9,6 @@ class Parking extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'zone','input','exit','table'
+        'type_id'
     ];
 }

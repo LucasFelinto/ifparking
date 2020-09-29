@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParkingsTable extends Migration
+class AddTypesIdToParkingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateParkingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parkings', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('type_id');
-            $table->timestamps();
+        Schema::table('parkings', function (Blueprint $table) {
+            $table->foreign('type_id')->references('id')->on('types');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateParkingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parkings');
+        Schema::table('parkings', function (Blueprint $table) {
+            Schema::dropIfExists('vehicles');
+        });
     }
 }
