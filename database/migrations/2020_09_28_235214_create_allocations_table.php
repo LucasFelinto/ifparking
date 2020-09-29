@@ -15,14 +15,14 @@ class CreateAllocationsTable extends Migration
     {
         Schema::create('allocations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('vehicles_id');
-            $table->unsignedBigInteger('zones_id');
-            $table->dateTime('start');
-            $table->dateTime('end');
+            $table->unsignedBigInteger('vehicle_id');
+            $table->unsignedBigInteger('zone_id');
+            $table->string('start');
+            $table->string('end')->nullable();
             $table->boolean('status');
 
-            $table->foreign('vehicles_id')->references('id')->on('vehicles');
-            $table->foreign('zones_id')->references('id')->on('zones');
+            $table->foreign('vehicle_id')->references('id')->on('vehicles');
+            $table->foreign('zone_id')->references('id')->on('zones');
             // $table->timestamps();
         });
     }
