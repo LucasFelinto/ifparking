@@ -22,6 +22,8 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('#DeusETop'),
                 'telephone' => '081992765185',
                 'registration' => '2018infig0563',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
             ],
             1 => [
                 'cpf' => '11111111111',
@@ -30,6 +32,8 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('EUSouDeJesus'),
                 'telephone' => '081992765185',
                 'registration' => '2020JesusVem',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
             ],
             2 => [
                 'cpf' => '22222222222',
@@ -38,9 +42,10 @@ class UsersTableSeeder extends Seeder
                'password' => bcrypt('#salmos23'),
                'telephone' => '081992765185',
                'registration' => '2020infig0563',
+               'created_at' => date("Y-m-d H:i:s"),
+               'updated_at' => date("Y-m-d H:i:s"),
             ],
        
-
             ];
 
             User::insert($users);
