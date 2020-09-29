@@ -20,14 +20,18 @@ class VehicleTableSeeder extends Seeder
                 'type_id' => '1',
                 'board' => 'IHC-2020',
                 'model' => 'Ferrari California',
-                'color' => 'Vermelha'
+                'color' => 'Vermelha',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
             ],
             1 => [
                 'user_id' => '2',
                 'type_id' => '1',
                 'board' => 'PHP-2020',
                 'model' => 'Nissan Kicks',
-                'color' => 'Vermelha'
+                'color' => 'Preto',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
             ],
         ]);
     }
