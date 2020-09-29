@@ -9,7 +9,7 @@ class Zone extends Model
 {
     use HasFactory;
 
-     protected $fillable = [
-        'id', 'number', 'status','type',
+    protected $fillable = [
+        'id', 'number', 'parking_id',
     ];
 }

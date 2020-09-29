@@ -14,17 +14,15 @@ class ZoneTableSeeder extends Seeder
      */
     public function run()
     {
-        $zone = [ 	 
-        	0 => [ 
-        	'number' => 1,
-        	'status' => true,
-        	'type' => 'Carro',
-        ],
-        	1 => [
-        	'number' => 2,
-        	'status' => false,
-        	'type' => 'Moto',
-        	]
+        $zone = [
+            0 => [
+                'parking_id' => 1,
+                'number' => 1,
+            ],
+            1 => [
+                'parking_id' => 2,
+                'number' => 2,
+            ]
         ];
 
         Zone::insert($zone);

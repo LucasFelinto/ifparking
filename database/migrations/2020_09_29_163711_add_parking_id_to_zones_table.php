@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateZonesTable extends Migration
+class AddParkingIdToZonesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateZonesTable extends Migration
      */
     public function up()
     {
-        Schema::create('zones', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('number');
-            $table->unsignedBigInteger('parking_id');
-            $table->timestamps();
+        Schema::table('zones', function (Blueprint $table) {
+            $table->foreign('parking_id')->references('id')->on('parkings');
         });
     }
-
-
 
     /**
      * Reverse the migrations.
@@ -30,6 +25,8 @@ class CreateZonesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zones');
+        Schema::table('zones', function (Blueprint $table) {
+            //
+        });
     }
 }
