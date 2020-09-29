@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  .btn{
+  width: 100%;
+  height: 120px;
+  background-color: #010615;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  }
+  
+  #btn-options:focus {
+  background: #0090F8;
+  }
+  
+  
+  #btn-options{
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s all;
+  }
+  
+  #btn-vagas{
+  width: 50px;
+  height: 30px;
+  background: gray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  }
+  
+  .vacancies{
+  width: 100%;
+  padding: 10px;
+  background-color: #010615;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  }
+  
+  .car-parking{
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+  .vagas-veiculos-peq{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .bicycle-parking{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  }
+   
+  .motorcycle-parking{
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  }
+    
+   #v-a{
+  width: 150px;
+  height: 65px;
+  border: 1px solid whitesmoke;
+  border-right: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;   
+  flex-direction: row;
+   }
+  
+   #v-b{
+  width: 150px;
+  height: 65px;
+  border: 1px solid whitesmoke;
+  padding: 5px;
+  border-left: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;   
+  flex-direction: row;
+  }
+  
+  #v-c{
+  width: 150px;
+  height: 65px;
+  border: 1px solid white;
+  border-right: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;   
+  flex-direction: row;
+  }
+  
+  .vacancy-number-a,.vacancy-number-b,.vacancy-number-c{
+  color: #FFFFFF;
+  margin: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  }
+  
+  .nav-footer{
+  width: 100%;
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 25px 25px 0px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  }
