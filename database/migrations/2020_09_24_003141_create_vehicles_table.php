@@ -17,9 +17,9 @@ class CreateVehiclesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('type_id');
-            $table->string('board');
-            $table->string('model');
-            $table->string('color');
+            $table->string('board')->nullable();
+            $table->string('model')->nullable();
+            $table->string('color')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
