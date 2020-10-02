@@ -29,6 +29,21 @@
                 <x-jet-input class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
+            <div>
+                <x-jet-label value="{{ __('Cpf') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required autofocus autocomplete="cpf" />
+            </div>
+
+            <div>
+                <x-jet-label value="{{ __('Telephone') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="telephone" :value="old('telephone')" autocomplete="telephone" />
+            </div>
+
+            <div>
+                <x-jet-label value="{{ __('Registration') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="registration" :value="old('registration')" autocomplete="registration" />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
