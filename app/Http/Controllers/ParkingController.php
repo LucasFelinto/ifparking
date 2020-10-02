@@ -24,7 +24,7 @@ class ParkingController extends Controller
      */
     public function create()
     {
-        //
+        return view('parking/create');
     }
 
     /**
@@ -33,9 +33,14 @@ class ParkingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Parking $parking)
     {
-        //
+        $request->validate([
+            'type_id' => 'required',
+        ]);
+
+        $parking->type_id = $request->type_id;
+        $parking->save();
     }
 
     /**
@@ -69,7 +74,6 @@ class ParkingController extends Controller
      */
     public function update(Request $request, Parking $parking)
     {
-        //
     }
 
     /**
@@ -80,6 +84,6 @@ class ParkingController extends Controller
      */
     public function destroy(Parking $parking)
     {
-        //
+
     }
 }

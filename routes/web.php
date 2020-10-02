@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ParkingController;
+use App\Models\Parking;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehicleController;/*
 |--------------------------------------------------------------------------
@@ -20,8 +23,11 @@ Route::get('/home', function () {
     return view('users.home');
 });
 
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
 Route::resource('/vehicle', VehicleController::class)->middleware('auth');
+
+Route::resource('/parkings', ParkingController::class);
