@@ -12,7 +12,7 @@
         <select name="type_id" id="">
             <option value="1">Carro</option>
             <option value="2">Moto</option>
-            <option value="3">Biciclet</option>
+            <option value="3">Bicicleta</option>
         </select>
         <input type="submit" value="enviar">
     </form>
