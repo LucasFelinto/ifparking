@@ -24,7 +24,7 @@ class VehicleController extends Controller
      */
     public function create()
     {
-        return view ('vehicles.create');
+        return view('vehicles.create');
     }
 
     /**
@@ -35,7 +35,22 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+                     //Fazemos a validação dos campos de titulo e corpo da postagem
+     $validatedData = $request ->validate([
+        'name' => ['required','max:100'],//obrigatorio,valor unico e tem que possuir no maximo, 255 caracteres
+        'email' => [ 'email:rfc,dns','required','unique:players'],//o email deve ser unico para cada jogador e é obrigatorio
+        'number' => ['required','unique:players','min:9'],//o numero vai ser unico, é obrigatorio, e deve conter entre 11 e 9 digitos
+        'nationality' => ['required'],//obrigatorio
+        'age' => ['required','integer'],
+        'position' => ['required'],
+        'description' => ['required'],
+    ]);
+
+        $player = new Players($validatedData);///criamos
+
+                $player->user_id = Auth::id();//identificamos o autor
+                $player->save();//salvamos
+                return redirect('players')->with('success', 'Jogador cadastrado com sucesso');
     }
 
     /**
