@@ -19,7 +19,7 @@
 </div>
 @endif
 
-<h1>Veiculos cadastrados:</h1>
+<h1>Veículos cadastrados:</h1>
 
 </body>
 </html>

@@ -66,7 +66,7 @@ class VehicleController extends Controller
      */
     public function show(Vehicle $vehicle)
     {
-        //
+        return view('vehicles.show', compact('vehicle'));
     }
 
     /**
@@ -77,7 +77,13 @@ class VehicleController extends Controller
      */
     public function edit(Vehicle $vehicle)
     {
-        //
+         if($vehicle->user_id === Auth::id()){
+            return view('vehicles.edit', compact('vehicle'));
+        }else{
+            return redirect()->route('vehicles.index')
+            ->with('error', "Você não tem permissão para editar os dados desse veículo!")
+            ->withInput();
+        }
     }
 
     /**
@@ -89,8 +95,15 @@ class VehicleController extends Controller
      */
     public function update(Request $request, Vehicle $vehicle)
     {
-        //
+        if($vehicle->user_id === Auth::id()){
+          $vehicle->update($request->all());
+          return redirect()->route('vehicles.index')->with('success', 'Hero has been updated!');
+        }else{
+            return redirect()->route('vehicles.index')
+            ->with('error', "You don't have permission to edit this, because are not the author!")
+            ->withInput();
     }
+}
 
     /**
      * Remove the specified resource from storage.
