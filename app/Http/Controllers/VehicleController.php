@@ -55,7 +55,7 @@ class VehicleController extends Controller
 
                 $vehicle->user_id = Auth::id();//identificamos o autor
                 $vehicle->save();//salvamos
-                return redirect('index')->with('success', 'vehicle cadastrado com sucesso');
+                return redirect('vehicles')->with('success', 'vehicle cadastrado com sucesso');
     }
 
     /**
