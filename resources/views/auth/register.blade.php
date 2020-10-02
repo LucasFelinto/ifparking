@@ -19,6 +19,21 @@
                 <x-jet-input class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <div>
+                <x-jet-label value="{{ __('Cpf') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required autofocus autocomplete="cpf" />
+            </div>
+
+            <div>
+                <x-jet-label value="{{ __('Telefone') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="telephone" :value="old('telephone')" autocomplete="telephone" />
+            </div>
+
+            <div>
+                <x-jet-label value="{{ __('Registro') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="registration" :value="old('registration')" autocomplete="registration" />
+            </div>
+
             <div class="mt-4">
                 <x-jet-label value="{{ __('Senha') }}" />
                 <x-jet-input class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
