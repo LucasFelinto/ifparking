@@ -30,3 +30,7 @@ Route::get('/home', function () {
 Route::resource('/vehicle', VehicleController::class)->middleware('auth');
 
 Route::resource('/parking', ParkingController::class);
+
+Route::get('/usuario', function () {
+    return view('usuario');
+})->name('usuario');
