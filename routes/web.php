@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ParkingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehicleController;
 
@@ -27,3 +28,5 @@ Route::get('/home', function () {
 // })->name('dashboard');
 
 Route::resource('/vehicle', VehicleController::class)->middleware('auth');
+
+Route::resource('/parking', ParkingController::class);
