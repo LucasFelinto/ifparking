@@ -43,6 +43,23 @@
         </div>
     </div> 
 
+     <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <strong>Criado:</strong>
+                {{ $vehicle->created_at }}
+            </div>
+        </div>  
+    </div>      
+
+     <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <strong>Atualizado:</strong>
+                {{ $vehicle->updated_at }}
+            </div>
+        </div>  
+    </div>      
 
 
     
