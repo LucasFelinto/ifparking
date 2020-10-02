@@ -19,7 +19,8 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        return view('vehicles.index');
+        
+        return view('vehicles.index');//retorna a view
     }
 
     /**

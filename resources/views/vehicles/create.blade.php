@@ -1,5 +1,5 @@
 
-<div class="d-flex align-items-center justify-content-center " style="height:50px; margin:10px;">
+<div class="d-flex align-items-center justify-content-center ">
 
 
 
