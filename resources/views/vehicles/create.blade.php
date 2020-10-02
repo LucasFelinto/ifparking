@@ -1,18 +1,7 @@
-@extends('layouts.app')
-@section('content')
 
 <div class="d-flex align-items-center justify-content-center " style="height:50px; margin:10px;">
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Ações disponiveis
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="{{ route ('players.index')}}">Listar seus jogadores</a>
-    <a class="dropdown-item" href="{{ route ('players.create')}}">Cadastar novo jogador</a>
-  </div>
-</div>
-</div>
+
 
 
 <div class="container">
@@ -23,7 +12,7 @@
 
 
                 <div class="card-body">
-                    <form method="POST" action="">
+                    <form method="POST" action="{{ route('vehicles.store') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -55,11 +44,11 @@
                         <div class="col-md-6">
                         <select id="inputState" class="form-control" name="color">
                             <!-- <option selected>Posição</option>!-->
-                            <option value="Goleiro">prata</option>
-                                  <option value="Goleiro">branco</option>
-                                  <option value="Goleiro">cinza</option>
-                                  <option value="Goleiro">vermelho</option>
-                                  <option value="Goleiro">preto</option>
+                            <option value="Prata">prata</option>
+                                  <option value="Branco">branco</option>
+                                  <option value="Cinza">cinza</option>
+                                  <option value="Vermelho">vermelho</option>
+                                  <option value="Preto">preto</option>
                             </select>
                         </div>
                         </div>
@@ -67,11 +56,14 @@
                         <div class="form-group row">
                         <label for="type_id" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de veículo') }}</label>
                         <div class="col-md-6">
+                        
                         <select id="inputState" class="form-control" name="type_id">
+                        @foreach($type as $types)
                             <!-- <option selected>Posição</option>!-->
-                                  <option value="Goleiro">Carro</option>
-                                  <option value="Goleiro">Moto</option>
+                                  <option value="{{$types->id}}">{{$types->name}}</option>
+                                  @endforeach
                             </select>
+                            
                         </div>
                         </div>
 
@@ -88,4 +80,15 @@
         </div>
     </div>
 </div>
-@endsection
+
+@if(session('success'))
+<div class="alert alert-success">
+  {{session('success')}}
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger">
+  {{session('error')}}
+</div>
+@endif

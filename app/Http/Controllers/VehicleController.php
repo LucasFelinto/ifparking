@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
+use App\Models\Type;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class VehicleController extends Controller
 {
@@ -14,7 +19,7 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        //
+        return view('vehicles.index');
     }
 
     /**
@@ -24,7 +29,9 @@ class VehicleController extends Controller
      */
     public function create()
     {
-        return view('vehicles.create');
+        $type = Type::all();
+        return view('vehicles.create', compact('type')); 
+
     }
 
     /**
@@ -35,22 +42,19 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-                     //Fazemos a validação dos campos de titulo e corpo da postagem
+                    //Fazemos a validação dos campos de titulo e corpo da postagem
      $validatedData = $request ->validate([
-        'name' => ['required','max:100'],//obrigatorio,valor unico e tem que possuir no maximo, 255 caracteres
-        'email' => [ 'email:rfc,dns','required','unique:players'],//o email deve ser unico para cada jogador e é obrigatorio
-        'number' => ['required','unique:players','min:9'],//o numero vai ser unico, é obrigatorio, e deve conter entre 11 e 9 digitos
-        'nationality' => ['required'],//obrigatorio
-        'age' => ['required','integer'],
-        'position' => ['required'],
-        'description' => ['required'],
+        'model' => ['required'],
+        'board' => [ 'required'],
+        'color' => ['required'],
+        'type_id' => ['required'],
     ]);
 
-        $player = new Players($validatedData);///criamos
+        $vehicle = new Vehicle($validatedData);///criamos
 
-                $player->user_id = Auth::id();//identificamos o autor
-                $player->save();//salvamos
-                return redirect('players')->with('success', 'Jogador cadastrado com sucesso');
+                $vehicle->user_id = Auth::id();//identificamos o autor
+                $vehicle->save();//salvamos
+                return redirect('index')->with('success', 'vehicle cadastrado com sucesso');
     }
 
     /**

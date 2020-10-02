@@ -27,7 +27,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::resource('/vehicle', VehicleController::class)->middleware('auth');
+Route::resource('/vehicles', VehicleController::class)->middleware('auth');
 
 Route::resource('/parking', ParkingController::class);
 
