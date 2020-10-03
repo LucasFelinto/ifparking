@@ -19,8 +19,10 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        
-        return view('vehicles.index');//retorna a view
+        $vehicles = Vehicle::all();
+        return view('vehicles.index', [
+        'vehicles'=> $vehicles
+        ]);
     }
 
     /**
@@ -31,7 +33,7 @@ class VehicleController extends Controller
     public function create()
     {
         $type = Type::all();
-        return view('vehicles.create', compact('type')); 
+        return view('vehicles.create', compact('type'));
 
     }
 
@@ -113,6 +115,8 @@ class VehicleController extends Controller
      */
     public function destroy(Vehicle $vehicle)
     {
-        //
+        $vehicle->delete();
+
+      //  return redirect()->route('vehicles');
     }
 }

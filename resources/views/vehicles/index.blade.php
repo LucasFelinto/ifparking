@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vehicles</title>
-</head>
-<body>
 
 @if(session('success'))
 <div class="alert alert-success">
@@ -19,7 +11,35 @@
 </div>
 @endif
 
-<h1>Veículos cadastrados:</h1>
 
-</body>
-</html>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>board</th>
+            <th>Model</th>
+            <th>Color</th>
+        </tr>
+
+
+        @foreach ($vehicles as $vehicle)
+
+        <tr>
+            <td>{{ $vehicle->board }}</td>
+            <td>{{ $vehicle->model }}</td>
+            <td>{{ $vehicle->color }}</td>
+            <td>
+
+                <form action={{ route('vehicles.destroy',['vehicle'=>$vehicle->id]) }} method="post">
+                    @csrf
+                    @method('delete')
+                    <input type="" name="vehicles" value={{ $vehicle->id }}>
+                    <button type="submit">Delete</button>
+                </form>
+
+            </td>
+        </tr>
+
+        @endforeach
+    </thead>
+</table>
+
