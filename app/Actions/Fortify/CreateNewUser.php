@@ -23,9 +23,9 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
-            'cpf' => ['required', 'string', 'max:12', 'min:12'],
-            'telephone' => ['required', 'string', 'max:255'],
-            'registration' => ['required', 'string', 'max:255'],
+            'cpf' => ['required', 'string', 'max:11', 'min:11'],
+            'telephone' => ['string', 'max:255'],
+            'registration' => ['string', 'max:255'],
         ])->validate();
 
         return User::create([

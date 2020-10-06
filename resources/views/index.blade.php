@@ -58,7 +58,7 @@
                                 </label>
                               </div>
                                     <a href="" class="btn btn-">Não consegue fazer login?</a>
-                                    <a href="" class="btn btn-">Criar conta</a>
+                                    <a href="" class="btn btn-" href="/register">Criar conta</a>
                               <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                           </form>
                     </div>        
