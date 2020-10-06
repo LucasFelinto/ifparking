@@ -9,6 +9,7 @@ class Parking extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'type_id'
+        'type_id',
+        'name'
     ];
 }
