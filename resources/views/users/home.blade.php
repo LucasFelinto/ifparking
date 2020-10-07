@@ -117,10 +117,12 @@
 </section>
 
      <nav class="nav-footer">
-         <img src={{ asset('imgIcones/supervisor_account-black-36dp.svg') }} alt="Icone de usuario"  id="img-icons"/>
-          <a href="#">
-             <img src={{ asset('imgIcones/settings-black-36dp.svg') }} alt="Icone de configurações"  id="img-icons"/>
-          </a>
+         <a href="/dashboard">
+            <img src={{ asset('imgIcones/supervisor_account-black-36dp.svg') }} alt="Icone de usuario"  id="img-icons"/>
+         </a>
+         <a href="#">
+            <img src={{ asset('imgIcones/settings-black-36dp.svg') }} alt="Icone de configurações"  id="img-icons"/>
+         </a>
      </nav>
 
 </body>
