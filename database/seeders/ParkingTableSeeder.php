@@ -24,7 +24,7 @@ class ParkingTableSeeder extends Seeder
             ],
             1 => [
                 'type_id' => '1',
-                'name' => 'A01',
+                'name' => 'A02',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s"),
             ],
