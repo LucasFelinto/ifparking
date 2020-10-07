@@ -15,17 +15,18 @@ use App\Http\Controllers\VehicleController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/home', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('users.home');
-});
+})->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::get('/home', function () {
+    return view('users.home');
+});
 
 Route::resource('/vehicles', VehicleController::class)->middleware('auth');
 
