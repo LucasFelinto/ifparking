@@ -57,7 +57,7 @@ class VehicleController extends Controller
 
                 $vehicle->user_id = Auth::id();//identificamos o autor
                 $vehicle->save();//salvamos
-                return redirect('vehicles')->with('success', 'vehicle cadastrado com sucesso');
+                return redirect('vehicles')->with('success', 'Veículo cadastrado com sucesso');
     }
 
     /**
@@ -99,7 +99,7 @@ class VehicleController extends Controller
     {
         if($vehicle->user_id === Auth::id()){
           $vehicle->update($request->all());
-          return redirect()->route('vehicles.index')->with('success', 'Hero has been updated!');
+          return redirect()->route('vehicles.index')->with('success', 'Dados do veículo atualizado!');
         }else{
             return redirect()->route('vehicles.index')
             ->with('error', "You don't have permission to edit this, because are not the author!")
@@ -115,8 +115,16 @@ class VehicleController extends Controller
      */
     public function destroy(Vehicle $vehicle)
     {
-        $vehicle->delete();
+            $vehicle->delete();
+ 
+    if($vehicle->user_id === Auth::id()){
+        return redirect()->route('vehicles.index')->with ('success', 'Veículo deletado!');
 
-      //  return redirect()->route('vehicles');
+        }else{
+            return redirect()->route('vehicles.index')
+            ->with('error', "Você precisa ser o proprietário para deletar esse veículo. ")
+            ->withInput();
+        }
     }
+    
 }
