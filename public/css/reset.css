@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 20px 5px;
+}
+
+html,
+body,
+input,
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.maring-bottom-m {
+    margin-bottom: 25px;
+}

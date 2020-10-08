@@ -1,0 +1,13 @@
+.primary-title {
+    font-size: 32px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.secondary-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FDB627;
+    text-transform: uppercase;
+}

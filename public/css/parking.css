@@ -1,0 +1,49 @@
+.parking {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 74px 74px;
+    grid-auto-rows: 74px;
+    grid-gap: 20px;
+
+    height: calc(100vh - 120px);
+    margin: 0 5px;
+}
+
+.parking__container {}
+
+
+.zone {
+    border: 1px solid #FF42AF;
+    border-right: none;
+    padding: 35px 0;
+
+    position: relative;
+}
+
+.zone__number {
+    font-weight: bold;
+    font-size: 11px;
+    color: #F1AD26;
+
+    position: absolute;
+    top: 14px;
+    left: 10px;
+
+    z-index: 9999;
+}
+
+.zone--false::after {
+    content: '';
+    width: 93%;
+    height: 70%;
+
+    margin-left: 5px;
+    margin: 9px 4px;
+
+    background-color: #0D0B2B;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    border: 2px dashed #F1AD26;
+}

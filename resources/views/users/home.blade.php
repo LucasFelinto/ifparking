@@ -3,127 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Home</title>
-  <link rel="stylesheet" href={{ asset('css/home.css') }}>
-  <link rel="stylesheet" href={{ asset('css/homedesktop.css') }}>
+  <link rel="stylesheet" href={{ asset('css/variables.css') }}>
+  <link rel="stylesheet" href={{ asset('css/reset.css') }}>
+  <link rel="stylesheet" href={{ asset('css/typography.css') }}>
+  <link rel="stylesheet" href={{ asset('css/nav.css') }}>
+  <link rel="stylesheet" href={{ asset('css/parking.css') }}>
 </head>
 <body>
-
-     <nav class="btn">
-       <a href="#" id="btn-options">
-        <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" id="img-icons"/>
-       </a>
-
-       <a href="#" id="btn-options">
-        <img src={{ asset('imgIcones/two_wheeler-white-48dp.svg') }} alt="Icone de moto" id="img-icons"/>
-       </a>
-     </nav>
-
-     <section class="vacancies">
-
-       <!-- Vagas para carros-->
-       <div class="car-parking">
-         <a href="#" id="btn-vagas" style="background-color: DarkRed;">A</a>
-         
-         <div id="v-a">
-            <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" id="img-icons"/>
-            <p class="vacancy-number-a">A01</p>
+    <div>
+        @foreach ($parkings as $parking)
+            <h1 class="secondary-title maring-bottom-m">Parking {{ $parking->name }}</h1>
+        @endforeach
+        <div class="parking">
+            @foreach ($zones as $zone)
+                <div class="zone">
+                    <span class="zone__number">{{ $zone->number }}</span>
+                </div>
+            @endforeach
         </div>
-        <div id="v-a">
-            <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" id="img-icons"/>
-            <p class="vacancy-number-a">A02</p>
+            </div>
+    <nav class="nav">
+        <div class="nav__container">
+            <div>Icon1</div>
+            <div>Icone2</div>
+            <div>Icon3</div>
         </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/accessible-white-36dp.svg') }} alt="Icone de Carro"  id="img-icons"/>
-           <p class="vacancy-number-a">A03</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/accessible-white-36dp.svg') }} alt="Icone de Carro"  id="img-icons"/>
-           <p class="vacancy-number-a">A04</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" style="display: none;" id="img-icons"/>
-           <p class="vacancy-number-a">A05</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" id="img-icons"/>
-           <p class="vacancy-number-a">A06</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" id="img-icons"/>
-           <p class="vacancy-number-a">A07</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/directions_car-white-48dp.svg') }} alt="Icone de Carro" style="display: none;" id="img-icons"/>
-           <p class="vacancy-number-a">A08</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/accessible-white-36dp.svg') }} alt="Icone de Carro"  id="img-icons"/>
-           <p class="vacancy-number-a">A09</p>
-        </div>
-        <div id="v-a">
-           <img src={{ asset('imgIcones/accessible-white-36dp.svg') }} alt="Icone de Carro"  id="img-icons"/>
-           <p class="vacancy-number-a">A10</p>
-        </div>
-
-    </div>
-
-     <div class="vagas-veiculos-peq">
-    
-      <div class="bicycle-parking">
-        <a href="#" id="btn-vagas"   style="background-color: DarkGreen;">B</a>
-  
-          <div id="v-b">
-             <p class="vacancy-number-b">B01</p>
-             <img src={{ asset('imgIcones/directions_bike-white-48dp.svg') }} alt="Icone de bicicleta"  id="img-icons"/>
-         </div>
-         <div id="v-b">
-             <p class="vacancy-number-b">B02</p>
-              <img src={{ asset('imgIcones/directions_bike-white-48dp.svg') }} alt="Icone de bicicleta"  id="img-icons"/>
-         </div>
-         <div id="v-b">
-              <p class="vacancy-number-b">B02</p>
-              <img src={{ asset('imgIcones/directions_bike-white-48dp.svg') }} alt="Icone de bicicleta" style="display: none;"  id="img-icons"/>
-         </div>
-          <div id="v-b">
-              <p class="vacancy-number-b">B02</p>
-              <img src={{ asset('imgIcones/directions_bike-white-48dp.svg') }} alt="Icone de bicicleta" id="img-icons"/>
-         </div>
-         
-       </div>
-
-
-       <div class="motorcycle-parking">
-           <a href="#" id="btn-vagas">C</a>
-        
-           <div id="v-c">
-             <img src={{ asset('imgIcones/two_wheeler-white-48dp.svg') }} alt="Icone de moto"  id="img-icons"/>
-             <p class="vacancy-number-c">C01</p>
-          </div>
-          <div id="v-c">
-            <img src={{ asset('imgIcones/two_wheeler-white-48dp.svg') }} alt="Icone de moto"  id="img-icons"/>
-            <p class="vacancy-number-c">C02</p>
-         </div>
-         <div id="v-c">
-           <img src={{ asset('imgIcones/two_wheeler-white-48dp.svg') }} alt="Icone de moto" style="display: none; "  id="img-icons"/>
-           <p class="vacancy-number-c">C03</p>
-        </div>
-        <div id="v-c">
-           <img src={{ asset('imgIcones/two_wheeler-white-48dp.svg') }} alt="Icone de moto" id="img-icons"/>
-          <p class="vacancy-number-c">C04</p>
-       </div>
-
-  </div>
-</section>
-
-     <nav class="nav-footer">
-         <a href="/dashboard">
-            <img src={{ asset('imgIcones/supervisor_account-black-36dp.svg') }} alt="Icone de usuario"  id="img-icons"/>
-         </a>
-         <a href="#">
-            <img src={{ asset('imgIcones/settings-black-36dp.svg') }} alt="Icone de configurações"  id="img-icons"/>
-         </a>
-     </nav>
-
+    </nav>
 </body>
 </html>

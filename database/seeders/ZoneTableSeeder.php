@@ -20,6 +20,22 @@ class ZoneTableSeeder extends Seeder
                 'number' => 1,
             ],
             1 => [
+                'parking_id' => 1,
+                'number' => 2,
+            ],
+            2 => [
+                'parking_id' => 1,
+                'number' => 3,
+            ],
+            3 => [
+                'parking_id' => 1,
+                'number' => 4,
+            ],
+            4 => [
+                'parking_id' => 1,
+                'number' => 5,
+            ],
+            5 => [
                 'parking_id' => 2,
                 'number' => 2,
             ]

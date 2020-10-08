@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Parking;
+use App\Models\Zone;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ParkingController extends Controller
 {
@@ -14,7 +16,16 @@ class ParkingController extends Controller
      */
     public function index()
     {
-        //
+        $parkings = DB::table('parkings')->paginate(1);
+        // $zones = DB::table('zones')
+        // ->join('parkings', 'zones.parking_id', '=', 'parkings.id')
+        // ->select('zones.*')
+        // ->get();
+        $zones = DB::table('zones')->where('parking_id', '=', $parkings->items()[0]->id)->get();
+        return view('users.home', [
+            'parkings' => $parkings,
+            'zones' => $zones
+        ]);
     }
 
     /**
