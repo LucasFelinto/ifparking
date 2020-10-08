@@ -15,9 +15,7 @@ use App\Http\Controllers\VehicleController;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return view('users.home');
-})->name('home');
+Route::middleware(['auth:sanctum', 'verified'])->get('/', 'App\Http\Controllers\ParkingController@index')->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
