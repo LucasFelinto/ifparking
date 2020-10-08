@@ -13,13 +13,7 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="nav-link active" href="#">
-                <img src="" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-        </a>
-        <a class="navbar-brand" href="#">IFPARKING</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand">IFPARKING</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                
@@ -66,14 +60,8 @@
                                     <div class="form-group row">
                                       <label for="color" class="col-md-4 col-form-label text-md-right">{{ __('Cor') }}</label>
                                     <div class="col-md-6">
-                                        <select id="inputState" class="form-control" name="color">
-                                            <!-- <option selected>Posição</option>!-->
-                                            <option value="Prata">prata</option>
-                                            <option value="Branco">branco</option>
-                                            <option value="Cinza">cinza</option>
-                                            <option value="Vermelho">vermelho</option>
-                                            <option value="Preto">preto</option>
-                                        </select>
+                                       <input type="text" class="form-control @error('color') is-invalid @enderror" name="color"
+                                       required autofocus>
                                     </div>
                                     </div>
 

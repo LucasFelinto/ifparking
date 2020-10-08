@@ -115,13 +115,13 @@ class VehicleController extends Controller
      */
     public function destroy(Vehicle $vehicle)
     {
-            $vehicle->delete();
  
     if($vehicle->user_id === Auth::id()){
+        $vehicle->delete();
         return redirect()->route('vehicles.index')->with ('success', 'Veículo deletado!');
 
         }else{
-            return redirect()->route('vehicles.index')
+            return redirect()->route('vehicles.index')   
             ->with('error', "Você precisa ser o proprietário para deletar esse veículo. ")
             ->withInput();
         }
