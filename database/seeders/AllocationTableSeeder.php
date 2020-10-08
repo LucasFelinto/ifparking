@@ -24,8 +24,8 @@ class AllocationTableSeeder extends Seeder
                 'status' => true,
             ],
             1 => [
-                'vehicle_id' => '1',
-                'zone_id' => '1',
+                'vehicle_id' => '2',
+                'zone_id' => '2',
                 'start' => '31/03/2019 12:00',
                 'end' =>  '31/03/2019 17:00',
                 'status' => true,

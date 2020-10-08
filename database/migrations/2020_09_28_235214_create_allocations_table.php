@@ -15,8 +15,8 @@ class CreateAllocationsTable extends Migration
     {
         Schema::create('allocations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('vehicle_id');
-            $table->unsignedBigInteger('zone_id');
+            $table->unsignedBigInteger('vehicle_id')->unique();
+            $table->unsignedBigInteger('zone_id')->unique();
             $table->string('start');
             $table->string('end')->nullable();
             $table->boolean('status');
