@@ -26,6 +26,7 @@ class CreateNewUser implements CreatesNewUsers
             'cpf' => ['required', 'string', 'max:11', 'min:11'],
             'telephone' => ['string', 'max:255'],
             'registration' => ['string', 'max:255'],
+            'adm' => ['required']
         ])->validate();
 
         return User::create([
@@ -35,6 +36,7 @@ class CreateNewUser implements CreatesNewUsers
             'cpf' => $input['cpf'],
             'telephone' => $input['telephone'],
             'registration' => $input['registration'],
+            'adm' => $input['adm'],
         ]);
     }
 }
