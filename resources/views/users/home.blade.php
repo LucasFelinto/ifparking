@@ -26,9 +26,19 @@
             </div>
     <nav class="nav">
         <div class="nav__container">
-            <div>Icon1</div>
-            <div>Icone2</div>
-            <div>Icon3</div>
+            <div>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+        
+                    <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                    this.closest('form').submit();">
+                        {{ __('Logout') }}
+                    </x-jet-dropdown-link>
+                </form>
+            </div>
+            <div>
+                <a class="dropdown-item" href="{{ route('vehicles.index')}}">Vê seus veículos</a>
+            </div>
         </div>
     </nav>
 </body>
