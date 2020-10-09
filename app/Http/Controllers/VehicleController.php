@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 
 class VehicleController extends Controller
 {
@@ -19,14 +20,10 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        /*$vehicles = Vehicle::all();
+        $vehicles = DB::select('select * from vehicles where user_id =?', [Auth::id()]);
         return view('vehicles.index', [
-        'vehicles'=> $vehicles
-        ]);*/
-
-        $vehicles = Vehicle::where('user_id',Auth::id())->orderBy('created_at','desc')->paginate(5);//asc para do mais velho ao mais novo
-
-        return view('vehicles.index',compact('vehicles'));
+            'vehicles' => $vehicles
+        ]);
     }
 
     /**
@@ -38,7 +35,6 @@ class VehicleController extends Controller
     {
         $type = Type::all();
         return view('vehicles.create', compact('type'));
-
     }
 
     /**
@@ -49,19 +45,19 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-                    //Fazemos a validação dos campos de titulo e corpo da postagem
-     $validatedData = $request ->validate([
-        'model' => ['required'],
-        'board' => [ 'required'],
-        'color' => ['required'],
-        'type_id' => ['required'],
-    ]);
+        //Fazemos a validação dos campos de titulo e corpo da postagem
+        $validatedData = $request->validate([
+            'model' => ['required'],
+            'board' => ['required'],
+            'color' => ['required'],
+            'type_id' => ['required'],
+        ]);
 
-        $vehicle = new Vehicle($validatedData);///criamos
+        $vehicle = new Vehicle($validatedData); ///criamos
 
-                $vehicle->user_id = Auth::id();//identificamos o autor
-                $vehicle->save();//salvamos
-                return redirect('vehicles')->with('success', 'Veículo cadastrado com sucesso');
+        $vehicle->user_id = Auth::id(); //identificamos o autor
+        $vehicle->save(); //salvamos
+        return redirect('vehicles')->with('success', 'Veículo cadastrado com sucesso');
     }
 
     /**
@@ -83,12 +79,12 @@ class VehicleController extends Controller
      */
     public function edit(Vehicle $vehicle)
     {
-         if($vehicle->user_id === Auth::id()){
+        if ($vehicle->user_id === Auth::id()) {
             return view('vehicles.edit', compact('vehicle'));
-        }else{
+        } else {
             return redirect()->route('vehicles.index')
-            ->with('error', "Você não tem permissão para editar os dados desse veículo!")
-            ->withInput();
+                ->with('error', "Você não tem permissão para editar os dados desse veículo!")
+                ->withInput();
         }
     }
 
@@ -101,15 +97,15 @@ class VehicleController extends Controller
      */
     public function update(Request $request, Vehicle $vehicle)
     {
-        if($vehicle->user_id === Auth::id()){
-          $vehicle->update($request->all());
-          return redirect()->route('vehicles.index')->with('success', 'Dados do veículo atualizado!');
-        }else{
+        if ($vehicle->user_id === Auth::id()) {
+            $vehicle->update($request->all());
+            return redirect()->route('vehicles.index')->with('success', 'Dados do veículo atualizado!');
+        } else {
             return redirect()->route('vehicles.index')
-            ->with('error', "You don't have permission to edit this, because are not the author!")
-            ->withInput();
+                ->with('error', "You don't have permission to edit this, because are not the author!")
+                ->withInput();
+        }
     }
-}
 
     /**
      * Remove the specified resource from storage.
@@ -119,16 +115,14 @@ class VehicleController extends Controller
      */
     public function destroy(Vehicle $vehicle)
     {
- 
-    if($vehicle->user_id === Auth::id()){
-        $vehicle->delete();
-        return redirect()->route('vehicles.index')->with ('success', 'Veículo deletado!');
 
-        }else{
-            return redirect()->route('vehicles.index')   
-            ->with('error', "Você precisa ser o proprietário para deletar esse veículo. ")
-            ->withInput();
+        if ($vehicle->user_id === Auth::id()) {
+            $vehicle->delete();
+            return redirect()->route('vehicles.index')->with('success', 'Veículo deletado!');
+        } else {
+            return redirect()->route('vehicles.index')
+                ->with('error', "Você precisa ser o proprietário para deletar esse veículo. ")
+                ->withInput();
         }
     }
-    
 }
