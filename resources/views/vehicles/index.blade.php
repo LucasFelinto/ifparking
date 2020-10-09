@@ -39,6 +39,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="{{ route('vehicles.create')}}">Cadastrar Veiculo</a>
+                <a class="dropdown-item" href="/parking">Ver Vagas</a>
             </div>
         </div>
     </div>
