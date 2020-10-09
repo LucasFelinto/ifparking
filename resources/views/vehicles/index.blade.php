@@ -55,8 +55,7 @@
                                         <td>{{ $vehicle->model }}</td>
                                         <td>{{ $vehicle->color }}</td>
                                         <td>{{ $vehicle->type_id }}</td>
-                                        <td>
-                                        </td>
+                                       <!-- <td>{{$vehicle->user_id}}</td>!-->
                                     </tr>
                                     @endforeach
                             </table>

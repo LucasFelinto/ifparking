@@ -19,10 +19,14 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = Vehicle::all();
+        /*$vehicles = Vehicle::all();
         return view('vehicles.index', [
         'vehicles'=> $vehicles
-        ]);
+        ]);*/
+
+        $vehicles = Vehicle::where('user_id',Auth::id())->orderBy('created_at','desc')->paginate(5);//asc para do mais velho ao mais novo
+
+        return view('vehicles.index',compact('vehicles'));
     }
 
     /**
