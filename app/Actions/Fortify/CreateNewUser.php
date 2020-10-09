@@ -23,10 +23,10 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
-            'cpf' => ['required', 'string', 'max:11', 'min:11'],
+            'cpf' => ['required', 'string', 'max:11', 'min:11', 'unique:users'],
             'telephone' => ['string', 'max:255'],
             'registration' => ['string', 'max:255'],
-            'adm' => ['required']
+            'adm' => []
         ])->validate();
 
         return User::create([
@@ -36,7 +36,6 @@ class CreateNewUser implements CreatesNewUsers
             'cpf' => $input['cpf'],
             'telephone' => $input['telephone'],
             'registration' => $input['registration'],
-            'adm' => $input['adm'],
         ]);
     }
 }
