@@ -79,7 +79,7 @@
                                     <td>{{ $vehicle->board }}</td>
                                     <td>{{ $vehicle->model }}</td>
                                     <td>{{ $vehicle->color }}</td>
-                                    <td>{{ $vehicle->type_id }}</td>
+                                    <td>{{ $vehicle->type->name }}</td>
                                 </tr>
                                 @endforeach
                             </table>

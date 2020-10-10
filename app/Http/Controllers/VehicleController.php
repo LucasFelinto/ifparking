@@ -20,9 +20,8 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = DB::select('select * from vehicles where user_id =?', [Auth::id()]);
         return view('vehicles.index', [
-            'vehicles' => $vehicles
+            'vehicles' => Vehicle::vehicle()->get()
         ]);
     }
 
