@@ -70,6 +70,7 @@
                                     <th>MODELO</th>
                                     <th>COR</th>
                                     <th>TIPO DE VEÍCULO</th>
+                                    <th>DELETAR</th>
                                 </tr>
 
 
@@ -80,6 +81,7 @@
                                     <td>{{ $vehicle->model }}</td>
                                     <td>{{ $vehicle->color }}</td>
                                     <td>{{ $vehicle->type->name }}</td>
+                                    <td><button type="submit" class="btn btn-danger">Delete</button></td>
                                 </tr>
                                 @endforeach
                             </table>

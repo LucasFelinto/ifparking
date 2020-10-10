@@ -20,6 +20,7 @@ class CreateVehiclesTable extends Migration
             $table->string('board')->nullable();
             $table->string('model')->nullable();
             $table->string('color')->nullable();
+            $table->boolean('deleted')->default(0);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

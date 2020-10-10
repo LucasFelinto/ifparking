@@ -50,6 +50,7 @@ class VehicleController extends Controller
             'board' => ['required'],
             'color' => ['required'],
             'type_id' => ['required'],
+            'deleted' => [],
         ]);
 
         $vehicle = new Vehicle($validatedData); ///criamos

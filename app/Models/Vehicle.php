@@ -11,14 +11,15 @@ class Vehicle extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id', 'type_id', 'board', 'model', 'color',
+        'user_id', 'type_id', 'board', 'model', 'color', 'deleted'
     ];
 
-    public function type() {
+    public function type()
+    {
         return $this->belongsTo(Type::class);
     }
 
-      /**
+    /**
      * Scope a query to only include popular users.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
