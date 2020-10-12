@@ -20,8 +20,9 @@ class VehicleController extends Controller
      */
     public function index()
     {
+        $vehicles = Vehicle::vehicle()->get();
         return view('vehicles.index', [
-            'vehicles' => Vehicle::vehicle()->get()
+            'vehicles' => $vehicles
         ]);
     }
 

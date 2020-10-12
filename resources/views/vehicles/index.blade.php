@@ -81,7 +81,14 @@
                                     <td>{{ $vehicle->model }}</td>
                                     <td>{{ $vehicle->color }}</td>
                                     <td>{{ $vehicle->type->name }}</td>
-                                    <td><button type="submit" class="btn btn-danger">Delete</button></td>
+                                    <td>
+                                        <form action="{{route('vehicles.update', $vehicle->id)}}" method="POST">
+                                            @csrf
+                                            @method('PUT')
+                                            <input type="hidden"value="1" name="deleted">
+                                            <input type="submit" value="Deletar" class="">
+                                        </form>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </table>

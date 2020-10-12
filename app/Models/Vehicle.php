@@ -28,6 +28,6 @@ class Vehicle extends Model
 
     public function scopeVehicle($query)
     {
-        return $query->where('user_id', '=', Auth::id());
+        return $query->where('user_id', '=', Auth::id())->where('deleted', '=', 0);
     }
 }
