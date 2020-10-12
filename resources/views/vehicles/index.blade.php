@@ -82,11 +82,18 @@
                                     <td>{{ $vehicle->color }}</td>
                                     <td>{{ $vehicle->type->name }}</td>
                                     <td>
-                                        <form action="{{route('vehicles.update', $vehicle->id)}}" method="POST">
+                                        <form class="delete" action="{{route('vehicles.update', $vehicle->id)}}" method="POST">
                                             @csrf
                                             @method('PUT')
                                             <input type="hidden"value="1" name="deleted">
                                             <input type="submit" value="Deletar" class="">
+                                            <div class="alert">
+                                                <h1>deseja deletar esse carro?</h1>
+                                                <div>
+                                                    <span><input type="submit" value="Sim" class="d"></span>
+                                                    <span class="notButton">Não</span>
+                                                </div>
+                                            </div>
                                         </form>
                                     </td>
                                 </tr>
@@ -98,6 +105,61 @@
             </div>
         </div>
     </div>
-</body>
 
+
+</body>
+<style>
+    .alert {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        background-color: silver;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+
+
+        display: none;
+    }
+
+    .alert span {
+        background-color: cyan;
+        padding: 5px 8px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .alert h1 {
+        font-size: 22px;
+    }
+
+    .alert div {
+    }
+</style>
+<script>
+    const deleteButton = document.querySelector('.d');
+    const notButton = document.querySelector('.notButton');
+    const form = document.querySelector('form[class="delete"]');
+    const alert = document.querySelector('.alert');
+
+
+    notButton.addEventListener('click', () => {
+        alert.style.display = 'none';
+    })
+
+    form.addEventListener('submit', (event) => {
+        alert.style.display = 'block';
+        event.preventDefault();
+        deleteButton.addEventListener('click', () => {
+            form.submit();
+        })
+    });
+
+    // deleteButton.addEventListener('click', (event) => {
+    //     evnet.preventDefault();
+    // });
+</script>
 </html>
