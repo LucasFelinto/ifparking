@@ -47,7 +47,7 @@
                                     <div class="form-group row">
                                         <label for="board" class="col-md-4 col-form-label text-md-right">{{ __('Placa do veículo') }}</label>
                                         <div class="col-md-6">
-                                            <input id="board" type="text" class="form-control @error('board') is-invalid @enderror" name="board" maxlength="100"  value="{{old('board')}}" required autofocus maxlength="100">
+                                            <input id="board" type="text" class="form-control @error('board') is-invalid @enderror" name="board" maxlength="7"  value="{{old('board')}}" required autofocus maxlength="100">
                                             @error('board')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

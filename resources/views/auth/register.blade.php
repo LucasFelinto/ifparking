@@ -23,7 +23,7 @@
 
             <div>
                 <x-jet-label value="{{ __('Cpf') }}" />
-                <x-jet-input class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required autofocus autocomplete="cpf" />
+                <x-jet-input class="block mt-1 w-full" maxlength="11" type="text" name="cpf" :value="old('cpf')" required autofocus autocomplete="cpf" />
             </div>
 
             <div>
