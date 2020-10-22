@@ -35,6 +35,36 @@ class VehicleTableSeeder extends Seeder
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s"),
             ],
+            2 => [
+                'user_id' => '1',
+                'type_id' => '3',
+                'board' => 'AHB-2020',
+                'model' => 'Nissan Kicks',
+                'color' => 'Preto',
+                'deleted' => '0',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
+            ],
+            3 => [
+                'user_id' => '1',
+                'type_id' => '2',
+                'board' => 'ABC-2020',
+                'model' => 'Nissan Kicks',
+                'color' => 'Preto',
+                'deleted' => '0',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
+            ],
+            4 => [
+                'user_id' => '1',
+                'type_id' => '2',
+                'board' => 'CDF-2020',
+                'model' => 'Nissan Kicks',
+                'color' => 'Preto',
+                'deleted' => '0',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
+            ],
         ]);
     }
 }

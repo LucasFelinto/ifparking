@@ -1,0 +1,129 @@
+.header {
+    background-color: #e6edf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.header > .title {
+    font-size: 18px;
+    text-align: center;
+    color: #777;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.header a {
+    font-size: 9px;
+}
+
+.form-wrapper {
+    display: flex;
+}
+
+.cars-list {
+    overflow-y: scroll;
+}
+
+.cars-list > .car:nth-child(odd) {
+    background-color: #e6edf1;
+}
+
+.car {
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.car .model {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #777b7f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.car svg {
+    width: 137px;
+    position: absolute;
+    right: 10px;
+}
+
+.car .board {
+    font-size: 13px;
+    font-weight: bold;
+    color: #959c9f;
+    margin-top: 5px;
+}
+
+.car-svg {
+    bottom: -22%;
+}
+
+.motorcycle-svg {
+    bottom: -22%;
+}
+
+.bike-svg {
+    bottom: -24%;
+}
+
+.button {
+    border: none;
+    background-color: cornflowerblue;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.button.danger {
+    background-color: lightcoral;
+}
+
+@keyframes fadeIn {
+    from {
+        left: 40%;
+        opacity: 0;
+    }
+    to {
+        /* transform: translateY(0); */
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+.alert {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 10px 10px;
+
+    animation: fadeIn 0.5s linear;
+}
+
+.disable {
+    display: none;
+}
+.active {
+    display: block;
+}
+
+.alert h1 {
+    font-size: 18px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
