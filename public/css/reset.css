@@ -5,16 +5,20 @@
 }
 
 html {
-    color: white;
+    color: black;
     background-color: var(--primary-color);
-    padding: 20px 5px;
+    /* padding: 20px 5px; */
+}
+
+a {
+    text-decoration: none;
 }
 
 html,
 body,
 input,
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .maring-bottom-m {
