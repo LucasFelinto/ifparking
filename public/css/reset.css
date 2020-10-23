@@ -12,6 +12,11 @@ html {
 
 a {
     text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
 }
 
 html,

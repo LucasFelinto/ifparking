@@ -14,7 +14,7 @@
     <header class="header">
         <h1 class="title">Seus veículos</h1>
         <nav>
-            <a class="button" href="">Adicionar veículo</a>
+            <a class="button" href={{ route('vehicles.create') }}>Adicionar veículo</a>
         </nav>
     </header>
 
@@ -26,7 +26,7 @@
                         <h1 class="model">{{ $vehicle->model }}</h1>
                         <h1 class="board">{{ $vehicle->board }}</h1>
                         <div class="form-wrapper">
-                            <button class="button">Selecionar</button>
+                            <button style="margin-right: 10px;" class="button">Selecionar</button>
                             <form class="delete" action="{{ route('vehicles.update', $vehicle->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
@@ -34,7 +34,7 @@
                                 <button class="button danger btn-delete">Excluir</button>
                                 <!-- <input class="button danger" type="submit" value="Deletar" class=""> -->
                                 <div class="alert disable">
-                                    <h1>deseja deletar esse carro?</h1>
+                                    <h1>deseja deletar esse veículo ?</h1>
                                     <div>
                                         <input style="width: 80px;" type="submit" value="Sim" class="d button danger">
                                         <button style="width: 80px; display: inline-block;"

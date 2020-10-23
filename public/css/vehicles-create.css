@@ -1,0 +1,25 @@
+html {
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main .title {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.vehicles-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 17px;
+}

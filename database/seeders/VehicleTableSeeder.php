@@ -18,7 +18,7 @@ class VehicleTableSeeder extends Seeder
             0 => [
                 'user_id' => '1',
                 'type_id' => '1',
-                'board' => 'IHC-2020',
+                'board' => 'IHC2020',
                 'model' => 'Ferrari California',
                 'color' => 'Vermelha',
                 'deleted' => '0',
@@ -28,7 +28,7 @@ class VehicleTableSeeder extends Seeder
             1 => [
                 'user_id' => '2',
                 'type_id' => '1',
-                'board' => 'PHP-2020',
+                'board' => 'PHP2020',
                 'model' => 'Nissan Kicks',
                 'color' => 'Preto',
                 'deleted' => '0',
@@ -38,8 +38,8 @@ class VehicleTableSeeder extends Seeder
             2 => [
                 'user_id' => '1',
                 'type_id' => '3',
-                'board' => 'AHB-2020',
-                'model' => 'Nissan Kicks',
+                'board' => null,
+                'model' => 'Monark Circular',
                 'color' => 'Preto',
                 'deleted' => '0',
                 'created_at' => date("Y-m-d H:i:s"),
@@ -48,8 +48,8 @@ class VehicleTableSeeder extends Seeder
             3 => [
                 'user_id' => '1',
                 'type_id' => '2',
-                'board' => 'ABC-2020',
-                'model' => 'Nissan Kicks',
+                'board' => 'ABC2020',
+                'model' => 'Suzuki - GSX-R 1000 R',
                 'color' => 'Preto',
                 'deleted' => '0',
                 'created_at' => date("Y-m-d H:i:s"),
@@ -58,8 +58,8 @@ class VehicleTableSeeder extends Seeder
             4 => [
                 'user_id' => '1',
                 'type_id' => '2',
-                'board' => 'CDF-2020',
-                'model' => 'Nissan Kicks',
+                'board' => 'CDF2020',
+                'model' => 'Honda - CB 600 F Hornet',
                 'color' => 'Preto',
                 'deleted' => '0',
                 'created_at' => date("Y-m-d H:i:s"),
