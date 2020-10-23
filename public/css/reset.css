@@ -7,23 +7,18 @@
 html {
     color: black;
     background-color: var(--primary-color);
-    /* padding: 20px 5px; */
+    
 }
 
 a {
     text-decoration: none;
-    display: inline-block;
-}
-
-ul {
-    list-style: none;
 }
 
 html,
 body,
 input,
 button {
-    font-family: "Roboto", sans-serif;
+    font-family: "Helvetica", sans-serif;
 }
 
 .maring-bottom-m {
