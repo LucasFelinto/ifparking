@@ -33,7 +33,7 @@
     Ações disponiveis
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="{{ route('vehicles.index')}}">Listar Veiculo</a>
+    <a class="dropdown-item" href="{{ route('vehicles.create')}}">Cadastrar Veiculo</a>
   </div>
 </div>
 </div>
