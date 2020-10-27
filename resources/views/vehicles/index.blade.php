@@ -22,7 +22,7 @@
         <a class="navbar-brand">IFPARKING</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-               
+
          </div>
         </div>
     </nav>
@@ -54,7 +54,7 @@
                                 <button class="button danger btn-delete">Excluir</button>
                                 <!-- <input class="button danger" type="submit" value="Deletar" class=""> -->
                                 <div class="alert disable">
-                                    <h1>deseja deletar esse carro?</h1>
+                                    <h1>deseja deletar esse veículo?</h1>
                                     <div>
                                         <input style="width: 80px;" type="submit" value="Sim" class="d button danger">
                                         <button style="width: 80px; display: inline-block;"
