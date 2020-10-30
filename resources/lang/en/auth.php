@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Suas credenciais não correspondem!.',
-    'throttle' => 'Muitas tentativas para estabecer o login. Favor, Tente novamente em: segundos segundos.',
+    'failed' => 'As credenciais não correspondem!.',
+    'throttle' => 'Muitas tentativas de login. Tente novamente em: segundos segundos.',
 
 ];
