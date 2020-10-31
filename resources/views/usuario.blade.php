@@ -13,33 +13,34 @@
 
 </head>
 <body>
+
     <nav class="navbar navbar-dark bg-dark">
-        <a class="nav-link active" href="#">
-                <img src="https://avatars0.githubusercontent.com/u/49694337?s=400&u=8218fb304efa70abdd3b5e396dd34e2e1e34d7e5&v=4" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-        </a>
-        <a class="navbar-brand" href="#">IFPARKING</a>
+        <a class="navbar-brand"  href="usuario">IFPARKING</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" href="#">PERFIL <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="#">VAGAS</a>
-                <a class="nav-link" href="#">MEU VEICULO</a>
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">SAIR</a>
+                <a class="nav-link active" href="usuario">PERFIL <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="parking">VAGAS</a>
+                <a class="nav-link" href="vehicles">VEÍCULOS</a>
+                <a class="nav-link" href="http://localhost:8000/logout" tabindex="-1" >SAIR</a>
          </div>
         </div>
     </nav>
 
     <div class="jumbotron">
-  <h1 class="display-4">Olá, Seja bem vindo!</h1>
-  <p class="lead">ifparking é um site onde você usuario pode ver vagas de estacionameno disponives </p>
+  <h1 class="display-4">Olá, seja bem-vindo!</h1>
+  <p class="lead">IFparking é um site onde você usuario pode ver vagas de estacionameno disponives </p>
   <hr class="my-4">
   <p>Confira a vaga disponivel para o seu veiculo no botão abaixo</p>
-  <a class="btn btn-dark btn-lg" href="#" role="button">Ver Vagas <div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
+  <a class="btn btn-dark btn-lg" href="parking" role="button">Ver Vagas <div role="status">
 </div></a>
 
 </div>
 </body>
 </html>
+
+
+
+

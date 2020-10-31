@@ -19,7 +19,7 @@
 
 <body>
 <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand">IFPARKING</a>
+        <a class="navbar-brand" href="usuario">IFPARKING</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
 
@@ -52,11 +52,10 @@
                                 @method('PUT')
                                 <input type="hidden" value="1" name="deleted">
                                 <button class="button danger btn-delete">Excluir</button>
-                                <!-- <input class="button danger" type="submit" value="Deletar" class=""> -->
                                 <div class="alert disable">
                                     <h1>deseja deletar esse veículo?</h1>
                                     <div>
-                                        <input style="width: 80px;" type="submit" value="Sim" class="d button danger">
+                                        <input style="width: 80px;" type="submit" value="Sim" class="d button danger">  
                                         <button style="width: 80px; display: inline-block;"
                                             class="not-button button danger">Não</button>
                                     </div>
@@ -98,27 +97,7 @@
                     @endif
                 </li>
             @endforeach
-            <!-- <li class="car">
-                <div>
-                    <h1 class="model">CG 160 Titan S</h1>
-                    <h1 class="board">QMQ2020</h1>
-                    <button class="button">Selecionar</button>
-                    <button class="button danger">Excluir</button>
-                </div>
-                <svg class="motorcycle-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="motorcycle" class="svg-inline--fa fa-motorcycle fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                    <path fill="dimgray" d="M512.9 192c-14.9-.1-29.1 2.3-42.4 6.9L437.6 144H520c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24h-45.3c-6.8 0-13.3 2.9-17.8 7.9l-37.5 41.7-22.8-38C392.2 68.4 384.4 64 376 64h-80c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h66.4l19.2 32H227.9c-17.7-23.1-44.9-40-99.9-40H72.5C59 104 47.7 115 48 128.5c.2 13 10.9 23.5 24 23.5h56c24.5 0 38.7 10.9 47.8 24.8l-11.3 20.5c-13-3.9-26.9-5.7-41.3-5.2C55.9 194.5 1.6 249.6 0 317c-1.6 72.1 56.3 131 128 131 59.6 0 109.7-40.8 124-96h84.2c13.7 0 24.6-11.4 24-25.1-2.1-47.1 17.5-93.7 56.2-125l12.5 20.8c-27.6 23.7-45.1 58.9-44.8 98.2.5 69.6 57.2 126.5 126.8 127.1 71.6.7 129.8-57.5 129.2-129.1-.7-69.6-57.6-126.4-127.2-126.9zM128 400c-44.1 0-80-35.9-80-80s35.9-80 80-80c4.2 0 8.4.3 12.5 1L99 316.4c-8.8 16 2.8 35.6 21 35.6h81.3c-12.4 28.2-40.6 48-73.3 48zm463.9-75.6c-2.2 40.6-35 73.4-75.5 75.5-46.1 2.5-84.4-34.3-84.4-79.9 0-21.4 8.4-40.8 22.1-55.1l49.4 82.4c4.5 7.6 14.4 10 22 5.5l13.7-8.2c7.6-4.5 10-14.4 5.5-22l-48.6-80.9c5.2-1.1 10.5-1.6 15.9-1.6 45.6-.1 82.3 38.2 79.9 84.3z"></path>
-                </svg>
-            </li>
-            <li class="car">
-                <div>
-                    <h1 class="model">CG 160 Titan S</h1>
-                    <button class="button">Selecionar</button>
-                    <button class="button danger">Excluir</button>
-                </div>
-                <svg class="bike-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bicycle" class="svg-inline--fa fa-bicycle fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                    <path fill="dimgray" d="M512.509 192.001c-16.373-.064-32.03 2.955-46.436 8.495l-77.68-125.153A24 24 0 0 0 368.001 64h-64c-8.837 0-16 7.163-16 16v16c0 8.837 7.163 16 16 16h50.649l14.896 24H256.002v-16c0-8.837-7.163-16-16-16h-87.459c-13.441 0-24.777 10.999-24.536 24.437.232 13.044 10.876 23.563 23.995 23.563h48.726l-29.417 47.52c-13.433-4.83-27.904-7.483-42.992-7.52C58.094 191.83.412 249.012.002 319.236-.413 390.279 57.055 448 128.002 448c59.642 0 109.758-40.793 123.967-96h52.033a24 24 0 0 0 20.406-11.367L410.37 201.77l14.938 24.067c-25.455 23.448-41.385 57.081-41.307 94.437.145 68.833 57.899 127.051 126.729 127.719 70.606.685 128.181-55.803 129.255-125.996 1.086-70.941-56.526-129.72-127.476-129.996zM186.75 265.772c9.727 10.529 16.673 23.661 19.642 38.228h-43.306l23.664-38.228zM128.002 400c-44.112 0-80-35.888-80-80s35.888-80 80-80c5.869 0 11.586.653 17.099 1.859l-45.505 73.509C89.715 331.327 101.213 352 120.002 352h81.3c-12.37 28.225-40.562 48-73.3 48zm162.63-96h-35.624c-3.96-31.756-19.556-59.894-42.383-80.026L237.371 184h127.547l-74.286 120zm217.057 95.886c-41.036-2.165-74.049-35.692-75.627-76.755-.812-21.121 6.633-40.518 19.335-55.263l44.433 71.586c4.66 7.508 14.524 9.816 22.032 5.156l13.594-8.437c7.508-4.66 9.817-14.524 5.156-22.032l-44.468-71.643a79.901 79.901 0 0 1 19.858-2.497c44.112 0 80 35.888 80 80-.001 45.54-38.252 82.316-84.313 79.885z"></path>
-                </svg>
-            </li> -->
+           
         </ul>
     </main>
     <script>
@@ -208,7 +187,4 @@
             form.submit();
         })
     });
-=======
->>>>>>> 4b7d19d960d130acbfd8f55d36de8d3196676dbd
 
-</html>
