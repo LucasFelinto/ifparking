@@ -65,9 +65,14 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-                <a class="mdl-navigation__link" href="/vehicles">Meus veículos</a>
-                <a class="mdl-navigation__link" href="/vehicles/create">Cadastrar veículo</a>
-                <a class="mdl-navigation__link" href="">Sair</a>
+              <a class="mdl-navigation__link" href="/vehicles">Meus veículos</a>
+              <a class="mdl-navigation__link" href="/vehicles/create">Cadastrar veículo</a>
+               <form method="POST" action="{{ route('logout') }}">
+                 @csrf
+                 <a class="mdl-navigation__link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    this.closest('form').submit();"> {{ __('Sair') }}
+                 </a>
+               </form> 
             </nav>
             </div>
         </header>
@@ -92,15 +97,15 @@
                 @csrf
                 <input type="hidden" name="type_id" value="1">
                 <div style="width: 100%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="model" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="model" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Modelo</label>
                 </div>
                 <div style="width: 50%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="board"  maxlength="8" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="board"  maxlength="8" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Placa</label>
                 </div>
-                <div style="width: 49%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="color" type="text" id="sample3">
+                <div style="width: 49%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" required>
+                    <input class="mdl-textfield__input" name="color" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Color</label>
                 </div>
                 <button style="width: 100%;" class="mdl-button mdl-js-button mdl-button--raised">
@@ -114,15 +119,15 @@
                 @csrf
                 <input type="hidden" name="type_id" value="2">
                 <div style="width: 100%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="model" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="model" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Modelo</label>
                 </div>
                 <div style="width: 50%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="board"  maxlength="8" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="board"  maxlength="8" type="text" id="sample3"required>
                     <label class="mdl-textfield__label" for="sample3">Placa</label>
                 </div>
                 <div style="width: 49%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="color" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="color" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Color</label>
                 </div>
                 <button style="width: 100%;" class="mdl-button mdl-js-button mdl-button--raised">
@@ -136,11 +141,11 @@
                 @csrf
                 <input type="hidden" name="type_id" value="3">
                 <div style="width: 50%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="model" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="model" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Modelo</label>
                 </div>
                 <div style="width: 49%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="color" type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="color" type="text" id="sample3" required>
                     <label class="mdl-textfield__label" for="sample3">Color</label>
                 </div>
                 <button style="width: 100%;" class="mdl-button mdl-js-button mdl-button--raised">
