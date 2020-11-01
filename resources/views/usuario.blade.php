@@ -22,9 +22,18 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" href="usuario">PERFIL <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="parking">VAGAS</a>
+                <!-- <a class="nav-link" href="parking">VAGAS</a> -->
                 <a class="nav-link" href="vehicles">VEÍCULOS</a>
-                <a class="nav-link" href="http://localhost:8000/logout" tabindex="-1" >SAIR</a>
+                <div>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+        
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                    this.closest('form').submit();">
+                        {{ __('SAIR') }}
+                    </a>
+                </form>
+            </div>
          </div>
         </div>
     </nav>

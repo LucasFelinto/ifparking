@@ -32,12 +32,12 @@
         
                     <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
                                                                     this.closest('form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('SAIR') }}
                     </x-jet-dropdown-link>
                 </form>
             </div>
             <div>
-                <a class="dropdown-item" href="{{ route('vehicles.index')}}">Vê seus veículos</a>
+                <a class="dropdown-item" href="{{ route('vehicles.index')}}">VER SEUS VEÍCULOS</a>
             </div>
         </div>
     </nav>
