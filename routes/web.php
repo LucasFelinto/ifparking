@@ -21,8 +21,8 @@ Route::get('/', [App\Http\Controllers\VehicleController::class, 'index'])->middl
 
 Route::resource('/vehicles', VehicleController::class)->middleware('auth');
 
-Route::resource('/parking', ParkingController::class);
+Route::resource('/parking', ParkingController::class)->middleware('auth');
 
 Route::get('/usuario', function () {
     return view('usuario');
-})->name('usuario');
+})->middleware('auth');
