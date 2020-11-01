@@ -21,7 +21,7 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="">Meus veículos</a>
-                <a class="mdl-navigation__link" href="/vehicles/create">Cadasrtar veículo</a>
+                <a class="mdl-navigation__link" href="/vehicles/create">Cadastar veículo</a>
                 <a class="mdl-navigation__link" href="">Sair</a>
             </nav>
             </div>

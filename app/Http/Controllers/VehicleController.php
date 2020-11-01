@@ -48,7 +48,7 @@ class VehicleController extends Controller
         //Fazemos a validação dos campos de titulo e corpo da postagem
         $validatedData = $request->validate([
             'model' => ['required'],
-            'board' => ['required'],
+            'board' => [''],
             'color' => ['required'],
             'type_id' => ['required'],
             'deleted' => [],

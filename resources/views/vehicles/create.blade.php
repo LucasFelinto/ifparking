@@ -66,7 +66,7 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="/vehicles">Meus veículos</a>
-                <a class="mdl-navigation__link" href="/vehicles/create">Cadasrtar veículo</a>
+                <a class="mdl-navigation__link" href="/vehicles/create">Cadastrar veículo</a>
                 <a class="mdl-navigation__link" href="">Sair</a>
             </nav>
             </div>
@@ -96,7 +96,7 @@
                     <label class="mdl-textfield__label" for="sample3">Modelo</label>
                 </div>
                 <div style="width: 50%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="board"  type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="board"  maxlength="8" type="text" id="sample3">
                     <label class="mdl-textfield__label" for="sample3">Placa</label>
                 </div>
                 <div style="width: 49%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -118,7 +118,7 @@
                     <label class="mdl-textfield__label" for="sample3">Modelo</label>
                 </div>
                 <div style="width: 50%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" name="board"  type="text" id="sample3">
+                    <input class="mdl-textfield__input" name="board"  maxlength="8" type="text" id="sample3">
                     <label class="mdl-textfield__label" for="sample3">Placa</label>
                 </div>
                 <div style="width: 49%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
