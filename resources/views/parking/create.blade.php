@@ -14,20 +14,16 @@
  </head>
  <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="nav-link active" href="#">
-                <img src="" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-        </a>
-        <a class="navbar-brand" href="#">IFPARKING</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand">IFPARKING</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
 
          </div>
         </div>
     </nav>
-      <div class="jumbotron">
+
+
+    <div class="jumbotron">
         <div class="d-flex align-items-center justify-content-center ">
         </div>
         <div class="container">

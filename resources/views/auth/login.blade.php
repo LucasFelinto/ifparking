@@ -28,8 +28,7 @@
 
             <div class="block mt-4">
                 <label class="flex items-center">
-                    <input type="checkbox" class="form-checkbox" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Lembrar-me') }}</span>
+
                 </label>
             </div>
 
@@ -44,7 +43,7 @@
                 @endif
 
                 <x-jet-button class="ml-4">
-                    {{ __('Login') }}
+                    {{ __('Entrar') }}
                 </x-jet-button>
             </div>
         </form>

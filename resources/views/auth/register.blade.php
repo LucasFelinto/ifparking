@@ -3,7 +3,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <h1 class="primary-title">Criar conta</h1>
+            <h1 class="primary-title">CRIAR CONTA</h1>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -52,7 +52,7 @@
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Cadastrar') }}
                 </x-jet-button>
             </div>
         </form>
