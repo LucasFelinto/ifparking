@@ -23,7 +23,8 @@
 }
 
 .cars-list {
-    overflow-y: scroll;
+    display: flex;
+    margin: 10px;
 }
 
 .cars-list > .car:nth-child(odd) {
@@ -31,7 +32,7 @@
 }
 
 .car {
-    padding: 40px 20px;
+    padding: 40px 30px;
     position: relative;
     overflow: hidden;
 }
@@ -47,6 +48,7 @@
     width: 137px;
     position: absolute;
     right: 10px;
+    z-index: 1;
 }
 
 .car .board {
@@ -77,6 +79,9 @@
     /* margin-top: 10px; */
     /* margin-right: 10px; */
     text-transform: uppercase;
+    position: relative;
+    border-radius: 10px;
+    z-index: 9999;
     /* margin-top: 10px; */
 }
 
@@ -97,7 +102,7 @@
 }
 
 .alert {
-    width: 300px;
+    width: 80%;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -107,7 +112,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    z-index: 999;
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +130,9 @@
 }
 
 .alert h1 {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: lighter;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
 }
