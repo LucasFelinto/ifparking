@@ -3,6 +3,8 @@
 use App\Http\Controllers\ParkingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehicleController;
+use App\Http\Controllers\customersController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +23,11 @@ Route::get('/', [App\Http\Controllers\VehicleController::class, 'index'])->middl
 
 Route::resource('/vehicles', VehicleController::class)->middleware('auth');
 
-Route::resource('/parking', ParkingController::class)->middleware('auth');
+Route::resource('/customers', customersController::class)->middleware('auth');
+
+Route::resource('/parking', ParkingController::class);
 
 Route::get('/usuario', function () {
     return view('usuario');
-})->middleware('auth');
+})->name('usuario');
+
