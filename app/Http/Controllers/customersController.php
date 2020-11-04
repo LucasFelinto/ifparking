@@ -19,10 +19,15 @@ class customersController extends Controller
     public function index()
     {
 
+        if(Auth::check()){
+            $user = User::all(); 
 
-        $user = User::where('user_id',Auth::id())->orderBy('created_at','desc');//asc para do mais velho ao mais novo
+            return view('customers.index',compact('user'));
 
-        return view('customers.index',compact('user'));
+        };
+
+
+        
     }
 
     /**

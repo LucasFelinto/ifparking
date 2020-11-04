@@ -45,16 +45,13 @@
 
     @foreach ($user as $users)
        <div style="background-color: #323e93;display: inline-block;" class="demo-card-event mdl-card mdl-shadow--2dp">
-            <div style="color: white" class="mdl-card__title mdl-card--expand">
+            <div style="color: white" class="mdl-card__title mdl-card--expand display:flex; flex-direction:column">
+                <small>{{$users->id}}</small>
                 <h4>
                     {{$users->name}}<br>
-                    {{$users->id}}<br>
-                    <?php 
-                    
-                    var_dump($users);
-                    
-                    ?>
+
                 </h4>
+                <small>{{$users->email}}</small>
             </div>
             <div class="mdl-card__actions mdl-card--border">
 
