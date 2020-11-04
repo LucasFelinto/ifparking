@@ -26,6 +26,11 @@ class VehicleController extends Controller
         ]);
     }
 
+    public function select(Request $request, Vehicle $vehicle) {
+        $request->session()->put('vehicle', $vehicle);
+        return redirect()->route('parking.index');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

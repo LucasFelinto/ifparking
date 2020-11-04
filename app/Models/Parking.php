@@ -12,4 +12,8 @@ class Parking extends Model
         'type_id',
         'name'
     ];
+    public function zones()
+    {
+        return $this->hasMany('App\Models\Zone');
+    }
 }

@@ -16,15 +16,9 @@ class ParkingController extends Controller
      */
     public function index()
     {
-        $parkings = DB::table('parkings')->paginate(1);
-        // $zones = DB::table('zones')
-        // ->join('parkings', 'zones.parking_id', '=', 'parkings.id')
-        // ->select('zones.*')
-        // ->get();
-        $zones = DB::table('zones')->where('parking_id', '=', $parkings->items()[0]->id)->get();
+        $parkings = Parking::all();
         return view('users.home', [
-            'parkings' => $parkings,
-            'zones' => $zones
+            'parkings' => $parkings
         ]);
     }
 
@@ -65,7 +59,9 @@ class ParkingController extends Controller
      */
     public function show(Parking $parking)
     {
-        //
+        return view('parking.show', [
+            'parking' => $parking
+        ]);
     }
 
     /**
