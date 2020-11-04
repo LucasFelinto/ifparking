@@ -21,8 +21,13 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="">Meus veículos</a>
-                <a class="mdl-navigation__link" href="/vehicles/create">Cadastar veículo</a>
-                <a class="mdl-navigation__link" href="">Sair</a>
+                <a class="mdl-navigation__link" href="/vehicles/create">Cadastrar veículo</a>
+              <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="mdl-navigation__link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                       this.closest('form').submit();"> {{ __('Sair') }}
+                    </a>
+                </form>
             </nav>
             </div>
         </header>

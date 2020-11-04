@@ -27,7 +27,7 @@
                 <div>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-        
+
                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                                     this.closest('form').submit();">
                         {{ __('SAIR') }}
@@ -42,7 +42,7 @@
   <h1 class="display-4">Olá, seja bem-vindo!</h1>
   <p class="lead">IFparking é um site onde você usuario pode ver vagas de estacionameno disponives </p>
   <hr class="my-4">
-  <p>Confira a vaga disponivel para o seu veiculo no botão abaixo</p>
+  <p>Confira a vaga disponível para o seu veículo no botão abaixo</p>
   <a class="btn btn-dark btn-lg" href="parking" role="button">Ver Vagas <div role="status">
 </div></a>
 

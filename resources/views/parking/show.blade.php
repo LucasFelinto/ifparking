@@ -7,12 +7,13 @@
   <title>Document</title>
 </head>
 <body>
-  {{$parking->name}}
+  
   <form action="">
     @foreach ($parking->zones as $zone)
-        {{$zone->number}}
+        {{$parking->name}}-{{$zone->number}}
         <input type="radio" value={{$zone->id}} id={{$zone->id}} name="zone">
     @endforeach
+    <button>Enviar</button>
   </form>
 </body>
 </html>
