@@ -19,15 +19,11 @@ class AllocationTableSeeder extends Seeder
             0 => [
                 'vehicle_id' => '1',
                 'zone_id' => '1',
-                'start' => '09/05/1945 13:00',
-                'end' =>  '09/05/1945 14:00',
                 'status' => true,
             ],
             1 => [
                 'vehicle_id' => '2',
                 'zone_id' => '2',
-                'start' => '31/03/2019 12:00',
-                'end' =>  '31/03/2019 17:00',
                 'status' => true,
             ],
         ]);

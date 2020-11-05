@@ -8,7 +8,8 @@
 </head>
 <body>
   
-  <form action="">
+<form action={{ route('allocations') }} method="POST">
+    @csrf
     @foreach ($parking->zones as $zone)
         {{$parking->name}}-{{$zone->number}}
         <input type="radio" value={{$zone->id}} id={{$zone->id}} name="zone">

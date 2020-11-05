@@ -41,7 +41,7 @@
             </nav>
     </div>
     <main style="margin: 50px;" class="mdl-layout__content">
-            {{Session::get('vehicle')}}
+            {{-- {{Session::get('vehicle')}} --}}
             @foreach ($vehicles as $vehicle)
                <div style="background-color: #323e93;display: inline-block;" class="demo-card-event mdl-card mdl-shadow--2dp">
                     <div style="color: white" class="mdl-card__title mdl-card--expand">
