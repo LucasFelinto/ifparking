@@ -60,15 +60,13 @@
                             <div class="card-body">
                                  <form action={{ route('parking.store') }} method="POST">
                                     @csrf
-                                    <div class="form-group row">
+                                    <div style="width: 70%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <div class="col-md-6">
-                                            <select id="board" class="form-control @error('board') is-invalid @enderror" name="type_id" maxlength="10"name="type_id" id="">
-                                                <option value="1">Carro</option>
-                                                <option value="2">Moto</option>
-                                                <option value="3">Bicicleta</option>
+                                            <select class="form-control" name="parking">
+                                                <option value="1">Estacionamento</option>
                                             </select>
-                                            <input type="text" name="name" placeholder="nome">
-                                        <input type="submit" class="btn btn-secondary" value="enviar">
+                                            <input type="text" name="name" placeholder="Exemplo: A01">
+                                        <input type="submit" class="btn btn-secondary" value="Enviar" required>
                                       </div>
                                     </div>
                                 </form>
