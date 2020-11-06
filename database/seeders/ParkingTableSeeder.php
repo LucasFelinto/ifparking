@@ -17,13 +17,11 @@ class ParkingTableSeeder extends Seeder
     {
         DB::table('parkings')->insert([
             0 => [
-                'type_id' => '1',
                 'name' => 'A01',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s"),
             ],
             1 => [
-                'type_id' => '1',
                 'name' => 'A02',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s"),

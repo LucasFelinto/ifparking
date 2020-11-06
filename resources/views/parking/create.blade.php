@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <title>IFParking | Users</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-light_green.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -56,17 +55,15 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header text-light bg-dark" style="text-align: center">{{ __('ESTACIONAMENTO') }}</div>
-                            <div class="card-body">
+                        <div class="form-control form-control-lg " style="text-align: center">{{ __('ESTACIONAMENTO') }}</div>
+                            <div class="card-body   ">
                                  <form action={{ route('parking.store') }} method="POST">
                                     @csrf
-                                    <div style="width: 70%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <div class="input-group mb-3">
                                         <div class="col-md-6">
-                                            <select class="form-control" name="parking">
-                                                <option value="1">Estacionamento</option>
-                                            </select>
-                                            <input type="text" name="name" placeholder="Exemplo: A01">
-                                        <input type="submit" class="btn btn-secondary" value="Enviar" required>
+                                            <span>Nome do Estacionamento</span>
+                                             <input style="margin-top:10px;" type="text" name="name" placeholder="Exemplo: A01" class="form-control form-control-lg" required>
+                                           <button style="margin-top:10px;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Enviar</button>
                                       </div>
                                     </div>
                                 </form>

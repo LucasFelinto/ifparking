@@ -41,14 +41,13 @@ class ParkingController extends Controller
     public function store(Request $request, Parking $parking)
     {
         $request->validate([
-            'type_id' => 'required',
-            'name' => 'required'
+            'name' => 'required|unique:parkings',
         ]);
 
-        $parking->type_id = $request->type_id;
         $parking->name = $request->name;
         $parking->save();
-        return redirect('parking.index')->with('success', 'estacionamento cadastrado com sucesso');
+        
+        return redirect('parking')->with('success', 'estacionamento cadastrado com sucesso');
     }
 
     /**
