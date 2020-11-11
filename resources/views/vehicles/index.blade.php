@@ -48,34 +48,36 @@
 </div>
 
 
-
-
-    <main style="margin: 50px;" class="mdl-layout__content">
-            {{-- {{Session::get('vehicle')}} --}}
-            @foreach ($vehicles as $vehicle)
-               <div style="background-color: #323e93;display: inline-block;" class="demo-card-event mdl-card mdl-shadow--2dp">
-                    <div style="color: white" class="mdl-card__title mdl-card--expand">
-                        <h4>
-                            {{$vehicle->model}}<br>
-                            {{$vehicle->board}}<br>
-                        </h4>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <form action="{{ route('vehicles.update', $vehicle->id) }}" method="POST">
-                            @csrf
-                            @method('PUT')
-                        <input type="hidden" value="1" name="deleted">
-                        <a href={{ route('vehicle.select', ['vehicle'=> $vehicle]) }} class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            Selecionar
-                        </a>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent show-dialog">
-                            Excluir
-                        </button>
-                    </form>
-
-                    </div>
+    @if (Session::get('isActive'));
+        <main style="margin: 50px;" class="mdl-layout__content">
+        {{-- {{Session::get('vehicle')}} --}}
+        @foreach ($vehicles as $vehicle)
+            <div style="background-color: #323e93;display: inline-block;" class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div style="color: white" class="mdl-card__title mdl-card--expand">
+                    <h4>
+                        {{$vehicle->model}}<br>
+                        {{$vehicle->board}}<br>
+                    </h4>
                 </div>
-            @endforeach
+                <div class="mdl-card__actions mdl-card--border">
+                    <form action="{{ route('vehicles.update', $vehicle->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                    <input type="hidden" value="1" name="deleted">
+                    <a href={{ route('vehicle.select', ['vehicle'=> $vehicle]) }} class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Selecionar
+                    </a>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent show-dialog">
+                        Excluir
+                    </button>
+                </form>
+
+                </div>
+            </div>
+        @endforeach
+    @else
+        <a href={{ route('vehicle.checkout') }}>Checkout</a>
+    @endif
     </main>
         <dialog class="mdl-dialog">
             <h5 class="mdl-dialog__title">Deseja excluir esse veículo?</h5>

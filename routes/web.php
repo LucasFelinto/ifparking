@@ -31,6 +31,9 @@ Route::post('/allocations', [App\Http\Controllers\AllocationController::class, '
 Route::resource('/parking', ParkingController::class);
 Route::get('/select/{vehicle}', [App\Http\Controllers\VehicleController::class, 'select'])->middleware('auth')->name('vehicle.select');
 
+Route::get('/checkout', [App\Http\Controllers\AllocationController::class, 'checkout'])->middleware('auth')->name('vehicle.checkout');
+
+
 Route::get('/usuario', function () {
     return view('usuario');
 })->name('usuario');

@@ -12,4 +12,8 @@ class Zone extends Model
     protected $fillable = [
         'id', 'number', 'parking_id',
     ];
+
+    public function allocation() {
+        return $this->hasMany(Allocation::class);
+    }
 }

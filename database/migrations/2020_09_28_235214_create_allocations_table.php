@@ -17,9 +17,6 @@ class CreateAllocationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('vehicle_id');
             $table->unsignedBigInteger('zone_id');
-            // $table->string('start');
-            // $table->string('end')->nullable();
-            $table->boolean('status');
 
             $table->foreign('vehicle_id')->references('id')->on('vehicles');
             $table->foreign('zone_id')->references('id')->on('zones');

@@ -17,6 +17,7 @@ class CreateZonesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('number');
             $table->unsignedBigInteger('parking_id');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
