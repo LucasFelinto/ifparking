@@ -48,7 +48,7 @@
 </div>
 
 
-    @if (Session::get('isActive'));
+    @if (!empty(Session::get('isActive')));
         <main style="margin: 50px;" class="mdl-layout__content">
         {{-- {{Session::get('vehicle')}} --}}
         @foreach ($vehicles as $vehicle)
