@@ -26,7 +26,7 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="">Meus veículos</a>
+            <a class="mdl-navigation__link" href="/vehicles">Meus veículos</a>
             <a class="mdl-navigation__link" href="/vehicles/create">Cadastrar veículo</a>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
